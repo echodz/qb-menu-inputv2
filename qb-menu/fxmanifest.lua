@@ -1,4 +1,3 @@
-shared_script 'config.lua'
 fx_version 'cerulean'
 lua54 'yes'
 game 'gta5'
@@ -10,7 +9,7 @@ files {
     'html/**',
     'config.lua',
 }
-escrow_ignore 'client/main.lua'
+shared_script 'config.lua'
 dependency '/assetpacks'
 
 
