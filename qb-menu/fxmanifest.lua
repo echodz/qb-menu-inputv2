@@ -1,5 +1,3 @@
-shared_script '@rc-hub/ai_module_fg-obfuscated.lua'
-shared_script '@rc-hub/shared_fg-obfuscated.lua'
 shared_script 'config.lua'
 fx_version 'cerulean'
 lua54 'yes'
