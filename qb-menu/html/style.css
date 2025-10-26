@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ font-family: 'Rajdhani', sans-serif; 
+}
+
+body {
+  background: transparent !important;
+  user-select: none;
+  color: white;
+}
+
+#mainDiv {
+  width: 100%;
+  height: 100%;
+  display: none; 
+  position: absolute;
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.85) 0%, rgba(20, 20, 20, 0) 85%);
+}
+
+#menuContainer {
+   position: absolute;
+   top: 10%; 
+   left: 4%;
+   transform: none;
+   width: 300px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   max-height: 80vh; 
+   overflow-y: auto; 
+}
+
+
+
+
+#menuHeader h2 {
+   font-size: 1.3rem;
+   font-weight: 700;
+   letter-spacing: 1px;
+   margin-left: 2px;
+   color: #fff;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.header-icon {
+   width: 20px;
+   height: 20px;
+   background: radial-gradient(#ededed40, #ffffff0a);
+   position: relative;
+}
+
+.header-icon::before,
+.header-icon::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid var(--Theme-Color, #1e90ff); 
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 11;
+}
+
+.header-icon::before {
+    top: 0px;
+    left: 0px;
+            border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: none;
+    border-right: none;
+}
+
+.header-icon::after {
+    bottom: 0px;
+    right: 0px;
+            border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top: none;
+    border-left: none;
+}
+
+#menuHeader p {
+   font-size: 0.8rem;
+   color: rgba(200, 200, 200, 0.7);
+   margin-top: 2px;
+   margin-left: 2px;
+}
+
+#searchBar {
+   width: 100%;
+   padding: 10px 14px;
+   border: none;
+   border-radius: 2px;
+   background: radial-gradient(#ededed40, #ffffff0a);
+   color: #fff;
+   font-size: 0.9rem;
+   font-family: 'Rajdhani', sans-serif;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   outline: none;
+}
+
+#searchBar::placeholder {
+   color: rgba(200, 200, 200, 0.7);
+}
+
+#mainDivMenus {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mainDivMenuDiv,
+.mainDivMenuDivHeader {
+   width: 100%;
+   padding: 12px 14px;
+   border-radius: 2px;
+   display: flex;
+   align-items: flex-start;
+   gap: 5px;
+   background: radial-gradient(#ededed40, #ffffff0a);
+   overflow: hidden;
+}
+
+.mainDivMenuDivDisabled {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 2px;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  background: radial-gradient(#ededed40, #ffffff0a);
+}
+
+.mainDivMenuDiv:hover {
+  background: radial-gradient(circle, rgba(134, 134, 134, 0.3) 10%, rgba(73, 73, 73, 0.5) 95%);
+}
+
+
+.mainDivMenuDivDisabled {
+  background: radial-gradient(circle, rgba(124, 13, 13, 0.4) 10%, rgba(61, 5, 5, 0.6) 95%);
+  color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+}
+
+.mainDivMenuDivDisabled #mainDivMenuDivIconDiv {
+  background: radial-gradient(circle, rgba(124, 13, 13, 0.4) 10%, rgba(61, 5, 5, 0.6) 95%);
+  color: #ff4d4d;
+}
+
+
+
+.mainDivMenuDivHeader {
+  font-family: 'Rajdhani', sans-serif; 
+  background: radial-gradient(circle, rgba(134, 134, 134, 0.205) 10%, rgba(73, 73, 73, 0.37) 95%);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--Theme-Color, #1e90ff);
+  letter-spacing: 0.5px;
+}
+
+
+#mainDivMenuDivIconDiv {
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(60, 60, 60, 0.85);
+  border-radius: 5px;
+  color: var(--Theme-Color, #1e90ff);
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.6);
+}
+
+
+#mainDivMenuDivTextsDiv h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#mainDivMenuDivTextsDiv span {
+   font-size: 0.8rem;
+   font-weight: 400;
+   color: rgba(220, 220, 220, 0.7);
+}
+
+.mainDivMenuDiv {
+    position: relative;
+}
+
+.mainDivMenuDiv::after {
+    content: "»";
+    position: absolute;
+    right: 4px;
+    top: 45%;
+    transform: translateY(-50%);
+    color: var(--Theme-Color, #1e90ff);
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--Theme-Color-Shadow, rgba(30, 144, 255, 0.8));
+    filter: blur(2px);
+    opacity: 0.8;
+}
+

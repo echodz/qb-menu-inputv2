@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ font-family: 'Rajdhani', sans-serif; 
+}
+
+body {
+  background: transparent !important;
+  user-select: none;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(82, 82, 82, 0.322);
+}
+::-webkit-scrollbar-thumb {
+   background: var(--Theme-Color);
+   border-radius: 5px;
+}
+
+.root-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.85) 0%, rgba(20, 20, 20, 0) 85%);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5; 
+}
+
+.root-wrapper.active {
+  display: block;
+  opacity: 1;
+}
+
+
+.main-wrapper {
+  position: absolute;
+  top: 10%;
+  left: 4%;
+  width: 300px;
+  display: none;
+  flex-direction: column;
+  gap: 12px; 
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.heading {
+  font-size: 1.0rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.heading-icon {
+   width: 20px;
+   height: 20px;
+   background: radial-gradient(#ededed40, #ffffff0a);
+   position: relative;
+}
+.heading-icon::before,
+.heading-icon::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid var(--Theme-Color, #1e90ff); 
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 11;
+}
+
+.heading-icon::before {
+    top: 0px;
+    left: 0px;
+            border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom: none;
+    border-right: none;
+}
+
+.heading-icon::after {
+    bottom: 0px;
+    right: 0px;
+            border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top: none;
+    border-left: none;
+}
+.form-input-group,
+.input-group-chk,
+.form-control,
+.form-select,
+.btn,
+.label {
+  margin-bottom: 8px; 
+}
+
+
+.form-control,
+.form-select,
+.btn,
+.label {
+  padding: 10px 12px;
+}
+
+
+.input-group,
+.input-group-chk {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+
+.main-wrapper > *:last-child {
+  margin-bottom: 0;
+}
+
+.form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-control,
+.form-select {
+   width: 100%;
+   padding: 10px 14px;
+   border: none;
+   border-radius: 2px;
+   background: radial-gradient(#ededed40, #ffffff0a);
+   color: #fff;
+   font-size: 0.9rem;
+   font-family: 'Rajdhani', sans-serif;
+   outline: none;
+}
+
+.form-control:hover,
+.form-select:hover {
+  background: radial-gradient(circle, rgba(134, 134, 134, 0.3) 10%, rgba(73, 73, 73, 0.5) 95%);
+}
+
+.form-select option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+::placeholder {
+   color: rgba(200, 200, 200, 0.7);
+}
+
+.form-input-group,
+.input-group-chk {
+   width: 100%;
+   padding: 12px 14px;
+   border-radius: 2px;
+   display: flex;
+   flex-direction: column;
+   gap: 9px;
+   background: radial-gradient(#ededed40, #ffffff0a);
+   overflow: hidden;
+}
+
+.form-input-group:hover,
+.input-group-chk:hover {
+  background: radial-gradient(circle, rgba(134, 134, 134, 0.3) 10%, rgba(73, 73, 73, 0.5) 95%);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.input-group label {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.input-group-chk {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.input-group-chk label {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.select-title {
+  font-size: 0.95rem;
+  color: var(--Theme-Color);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 2px;
+  background: radial-gradient(circle, rgba(134, 134, 134, 0.205) 10%, rgba(73, 73, 73, 0.37) 95%);
+  color: var(--Theme-Color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: radial-gradient(circle, rgba(134, 134, 134, 0.3) 10%, rgba(73, 73, 73, 0.5) 95%);
+  color: #fff;
+}
+
+.label {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 2px;
+  background: radial-gradient(#ededed40, #ffffff0a);
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.backgroundColour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: -1;
+}
