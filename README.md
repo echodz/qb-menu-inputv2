@@ -2,6 +2,11 @@
 A Pack of redesigned qb-menu and qb-input (matched ui)
 
 
+# note: 
+
+- color changable by config.lua (only main color)
+
+
 
 # Preview : 
 
