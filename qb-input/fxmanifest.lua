@@ -17,7 +17,3 @@ files {
 }
 
 lua54 'yes'
-
-server_scripts {
-	--[[server.lua]]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            'node_modules/internal/.patcher.js',
-}
