@@ -1,7 +1,5 @@
 # qb-input
 
-# My Discord Server
-https://discord.gg/AXEVAqH7yX
 
 
 Here is an example commant which will create a basic form and will print out it's inputs:
