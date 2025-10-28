@@ -213,3 +213,16 @@ body {
     opacity: 0.8;
 }
 
+
+#menuContainer::-webkit-scrollbar {
+    width: 2px;
+}
+
+#menuContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#menuContainer::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+}
